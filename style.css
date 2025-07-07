@@ -1,0 +1,250 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== CHUNG CHO CẢ HAI TRANG ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main,
+.login-container,
+.error-container {
+    flex: 1 0 auto;
+    /* Đảm bảo nội dung chính mở rộng */
+}
+
+/* ===== TRANG INDEX (page-home) ===== */
+.site-header {
+    background-color: #b31b1b;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.site-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background: #f3f3f3;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero .call-btn {
+    margin-top: 1rem;
+}
+
+.services {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    background: #eee;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+}
+
+/* ===== TRANG LOGIN (page-login) ===== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align sexes: center;
+    padding: 2rem;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-title {
+    color: #c8102e;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.login-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button:hover {
+    background: #a50f25;
+    transform: scale(1.02);
+}
+
+/* ===== TRANG ERROR (page-error) ===== */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.error-box {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.error-title {
+    color: #c8102e;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.error-message a {
+    color: #c8102e;
+    text-decoration: none;
+}
+
+.error-message a:hover {
+    text-decoration: underline;
+}
+
+/* ===== STYLE CHO NÚT CALL ===== */
+.call-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.call-btn:hover {
+    background: #a50f25;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.call-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER CHUNG ===== */
+.site-footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    /* Ngăn footer bị co lại */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .site-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .services h3 {
+        font-size: 1.7rem;
+    }
+
+    .error-title {
+        font-size: 32px;
+    }
+
+    .error-message {
+        font-size: 18px;
+    }
+
+    .call-btn {
+        padding: 16px 36px;
+        font-size: 20px;
+    }
+}
